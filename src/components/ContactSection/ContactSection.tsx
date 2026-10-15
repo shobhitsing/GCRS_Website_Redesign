@@ -29,7 +29,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section id={id} className={`contact-section relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-0 my-16 sm:my-24 lg:my-28 ${className}`}>
+    <section id={id} className={`contact-section relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-0 mt-16 mb-4 sm:mt-24 sm:mb-6 lg:mt-28 lg:mb-8 ${className}`}>
       <div className="contact-section-layout relative w-full">
         
         <div className="contact-section-intro w-full flex flex-col justify-start">

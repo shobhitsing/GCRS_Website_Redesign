@@ -19,7 +19,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
   };
 
   return (
-    <section className={`relative z-10 w-full max-w-[1140px] mx-auto px-4 sm:px-6 mt-14 mb-0 sm:mt-20 lg:mt-28 ${className}`}>
+    <section className={`relative z-10 w-full max-w-[1140px] mx-auto px-4 sm:px-6 mt-4 mb-0 sm:mt-6 lg:mt-8 ${className}`}>
       <div className="relative min-h-[500px] w-full bg-black px-5 pb-12 pt-10 sm:min-h-[500px] sm:px-10 sm:pb-16 sm:pt-14 md:min-h-[580px] lg:min-h-[630px] lg:px-14 lg:pb-8 lg:pt-7">
         <svg
           className="pointer-events-none absolute left-1/2 top-0 z-0 hidden h-auto w-[min(1024px,calc(100vw-32px))] max-w-none -translate-x-1/2 select-none sm:block"
