@@ -1,0 +1,101 @@
+.route-section-accent {
+  top: 64px;
+  right: 40px;
+  width: 178.372px;
+  height: 178.372px;
+  transform: rotate(-0.27deg);
+}
+
+@media (min-width: 1024px) {
+  .route-section-image > div {
+    position: relative;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .route-section-accent {
+    width: 139.13px;
+    height: 139.13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .route-section {
+    width: min(400px, 100%);
+    margin-inline: auto;
+  }
+
+  .route-section > div {
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    min-height: 672px;
+    margin-inline: auto;
+    padding: 8px 0;
+    box-sizing: border-box;
+  }
+
+  .route-section-content {
+    order: 1;
+    padding-bottom: 24px;
+  }
+
+  .route-section-title {
+    font-size: clamp(36px, 9vw, 64px) !important;
+    line-height: 1.05 !important;
+  }
+
+  .route-section-divider {
+    width: clamp(175px, 60vw, 388px);
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+
+  .route-section-description {
+    width: min(400px, 100%);
+    max-width: 400px;
+    height: 89px;
+    overflow: hidden;
+    font-family: 'Canela', 'Canela Text', 'Playfair Display', Georgia, serif;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+  }
+
+  .route-section-description p {
+    display: inline;
+    margin: 0;
+  }
+
+  .route-section-image {
+    order: 0;
+    display: flex;
+    width: 100%;
+    margin: 0 0 16px;
+  }
+
+  .route-section-image > div {
+    width: 100%;
+  }
+
+  .route-section-accent {
+    top: 16px !important;
+    right: 18px !important;
+    width: 64.62px;
+    height: 64.62px;
+    transform: rotate(-0.27deg);
+  }
+
+  .route-section-image > div > img:first-child {
+    width: 100%;
+    height: 387px;
+    object-fit: cover;
+  }
+}

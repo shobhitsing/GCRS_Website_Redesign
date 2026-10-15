@@ -1,0 +1,34 @@
+/* App-specific custom utility animations */
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-route-circle-reveal {
+  clip-path: circle(0% at 50% 50%);
+  animation: hero-route-circle-reveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+}
+
+@keyframes hero-route-circle-reveal {
+  from {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+
+  to {
+    clip-path: circle(72% at 50% 50%);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-route-circle-reveal {
+    animation: none;
+    clip-path: circle(72% at 50% 50%);
+    opacity: 1;
+  }
+}

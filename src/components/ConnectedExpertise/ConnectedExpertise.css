@@ -1,0 +1,122 @@
+.connected-expertise-section {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1236px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+@media (min-width: 640px) {
+  .connected-expertise-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .connected-expertise-section {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.connected-expertise-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  overflow: visible;
+}
+
+@media (min-width: 1024px) {
+  .connected-expertise-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.connected-expertise-image-col {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+@media (min-width: 1024px) {
+  .connected-expertise-image-col {
+    width: auto;
+    flex-shrink: 0;
+    justify-content: flex-start;
+  }
+}
+
+.connected-expertise-image-wrapper {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  max-width: 541px;
+}
+
+@media (min-width: 1024px) {
+  .connected-expertise-image-wrapper {
+    width: 541px;
+    height: 615px;
+    flex-shrink: 0;
+  }
+}
+
+.connected-expertise-img {
+  width: 100%;
+  max-width: 541px;
+  height: auto;
+  aspect-ratio: 541 / 615;
+  border-radius: 66px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 639px) {
+  .connected-expertise-description {
+    width: min(405px, 100%);
+    font-family: 'Canela', 'Canela Text', 'Playfair Display', Georgia, serif;
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+
+  .connected-expertise-description p {
+    display: inline;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .connected-expertise-img {
+    width: 541px;
+    height: 615px;
+    border-radius: 66px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
