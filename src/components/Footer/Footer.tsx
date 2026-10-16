@@ -6,17 +6,17 @@ export interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   return (
-    <footer className={`relative z-10 mx-auto mb-12 w-[min(443px,calc(100%-36px))] max-w-[1240px] sm:mb-16 sm:w-full sm:px-6 ${className}`}>
-      <div className="relative flex h-[110px] w-full items-center justify-between gap-2 overflow-hidden rounded-[20px] border border-black bg-[#1e1e1e] px-3 py-3 sm:h-auto sm:min-h-[256px] sm:items-start sm:gap-8 sm:rounded-[30px] sm:px-12 sm:py-12 md:items-center lg:px-[76px]">
-        <div className="flex w-[57%] min-w-0 flex-col items-start gap-1 sm:w-auto sm:gap-3">
+    <footer className={`relative z-10 mx-auto mb-12 w-[min(443px,calc(100%-36px))] max-w-[1240px] sm:mb-16 sm:w-full ${className}`}>
+      <div className="relative flex h-[110px] w-full items-center justify-between gap-2 overflow-hidden rounded-[20px] border border-black bg-[#1e1e1e] px-3 py-3 sm:h-auto sm:min-h-[256px] sm:items-start sm:gap-8 sm:rounded-[30px] sm:border-white/5 sm:px-12 sm:py-12 md:items-center lg:px-24">
+        <div className="flex w-[57%] min-w-0 flex-col items-start gap-1 sm:w-auto sm:gap-3 lg:gap-0">
           <img
             src="/gap-logo-footer.png"
             alt="Global Access Partners"
-            width={286}
-            height={71}
-            className="block h-auto w-[150px] sm:w-[220px] lg:w-[286px]"
+            width={360}
+            height={89}
+            className="block h-auto w-[150px] max-sm:-translate-x-[6%] sm:w-[220px] lg:w-[360px] lg:-translate-x-[6%]"
           />
-          <p className="max-w-[437px] text-[8px] leading-[11px] text-white sm:text-[15px] sm:leading-[29px]">
+          <p className="m-0 max-w-[437px] text-[8px] leading-[11px] text-white sm:text-[15px] sm:leading-[29px] lg:leading-[22px]">
             Market access for beauty, fragrance and personal care brands
           </p>
         </div>

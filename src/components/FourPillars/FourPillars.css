@@ -30,16 +30,6 @@
   gap: 10px;
 }
 
-.four-pillars-desktop-intro {
-  max-width: 760px;
-  margin: 0 auto 36px;
-  color: rgba(255, 255, 255, 0.82);
-  font-family: 'Canela', 'Canela Text', 'Playfair Display', Georgia, serif;
-  font-size: clamp(18px, 1.8vw, 24px);
-  line-height: 1.4;
-  text-align: center;
-}
-
 .four-pillars-line-1 {
   display: flex;
   align-items: center;
@@ -137,6 +127,7 @@
 
   .four-pillars-wrapper {
     margin-top: 24px;
+    margin-bottom: 8px;
   }
 
   .four-pillars-container {
@@ -146,11 +137,7 @@
 
   .four-pillars-header {
     gap: 8px;
-    margin: 0 -20px 32px;
-  }
-
-  .four-pillars-desktop-intro {
-    display: none;
+    margin: 0 -20px 20px;
   }
 
   .four-pillars-line-1 {
@@ -244,9 +231,6 @@
     font-size: clamp(7px, 2.4vw, 9px);
   }
 
-  .four-pillars-pagination-dots {
-    display: none;
-  }
 }
 
 /* Card item container */
@@ -488,4 +472,10 @@
   border-radius: 9999px;
   background-color: #ccff00;
   box-shadow: 0 0 12px rgba(204, 255, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .four-pillars-pagination-dots {
+    display: none;
+  }
 }

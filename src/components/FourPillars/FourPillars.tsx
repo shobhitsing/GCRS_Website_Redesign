@@ -106,10 +106,6 @@ export const FourPillars: React.FC = () => {
           </div>
         </div>
 
-        <p className="four-pillars-desktop-intro">
-          Choose where to focus and build a clear route in, from market insight and positioning to commercial planning and launch strategy
-        </p>
-
         <div className="four-pillars-mobile-cards">
           {PILLARS_LIST.map((card) => (
             <img

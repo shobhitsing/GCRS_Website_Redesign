@@ -20,7 +20,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
 
   return (
     <section className={`relative z-10 w-full max-w-[1140px] mx-auto px-4 sm:px-6 mt-4 mb-0 sm:mt-6 lg:mt-8 ${className}`}>
-      <div className="relative min-h-[500px] w-full bg-black px-5 pb-12 pt-10 sm:min-h-[500px] sm:px-10 sm:pb-16 sm:pt-14 md:min-h-[580px] lg:min-h-[630px] lg:px-14 lg:pb-8 lg:pt-7">
+      <div className="relative min-h-0 w-full bg-black px-5 pb-8 pt-10 sm:min-h-[500px] sm:px-10 sm:pb-16 sm:pt-14 md:min-h-[580px] lg:min-h-[630px] lg:px-14 lg:pb-8 lg:pt-7">
         <svg
           className="pointer-events-none absolute left-1/2 top-0 z-0 hidden h-auto w-[min(1024px,calc(100vw-32px))] max-w-none -translate-x-1/2 select-none sm:block"
           viewBox="0 0 1024 630"
@@ -156,7 +156,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
                     required
                     checked={agreed}
                     onChange={(e) => setAgreed(e.target.checked)}
-                    className="mt-1 h-[4.3168px] w-[4.3168px] shrink-0 cursor-pointer appearance-none rounded-[0.66px] border-[0.33px] border-[rgba(248,246,241,0.18)] bg-transparent checked:border-[#CCFF00] checked:bg-[#CCFF00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#CCFF00] sm:mt-1 sm:h-[13px] sm:w-[13px] sm:rounded-[2px]"
+                    className="mt-1 h-[4.3168px] w-[4.3168px] shrink-0 cursor-pointer appearance-none rounded-[0.66px] border-[0.33px] border-[#CCFF00] bg-[#F8F6F1] checked:border-[#CCFF00] checked:bg-[#CCFF00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#CCFF00] sm:mt-1 sm:h-[13px] sm:w-[13px] sm:rounded-[2px] lg:border-[1px] lg:border-[#CCFF00] lg:bg-[#F8F6F1] lg:checked:border-[#CCFF00] lg:checked:bg-[#CCFF00]"
                   />
                   <span
                     className="h-[19px] w-[193px] shrink-0 overflow-hidden text-[6.65px] font-normal leading-[9.5px] tracking-[0] text-[rgba(248,246,241,0.5)] sm:h-auto sm:w-[193px] sm:overflow-visible sm:text-[14px] sm:leading-[19.5px] lg:h-auto lg:w-[410px]"

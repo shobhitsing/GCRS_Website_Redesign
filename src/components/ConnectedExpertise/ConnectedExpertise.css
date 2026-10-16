@@ -94,6 +94,10 @@
 }
 
 @media (max-width: 639px) {
+  .connected-expertise-section {
+    margin-bottom: 1.5rem;
+  }
+
   .connected-expertise-description {
     width: min(405px, 100%);
     font-family: 'Canela', 'Canela Text', 'Playfair Display', Georgia, serif;

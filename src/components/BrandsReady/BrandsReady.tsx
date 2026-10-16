@@ -60,7 +60,7 @@ export const BrandsReady: React.FC<BrandsReadyProps> = ({
           />
         </div>
 
-        <div className="relative z-10 mt-[70px] max-w-[348px] sm:mt-0 sm:max-w-2xl">
+        <div className="relative z-10 mt-[48px] max-w-[348px] sm:mt-0 sm:max-w-2xl">
           <h2 className="font-serif text-[42.17px] sm:text-5xl lg:text-[58px] font-normal leading-[44.59px] sm:leading-[1.08] tracking-normal text-white select-none">
             {titleLine1} <br />
             {titleLine2} <br />
@@ -68,7 +68,7 @@ export const BrandsReady: React.FC<BrandsReadyProps> = ({
           </h2>
         </div>
 
-        <div className="relative z-10 mt-[145px] flex max-w-[345px] flex-col items-start sm:mt-16 sm:max-w-2xl lg:max-w-3xl">
+        <div className="relative z-10 mt-[64px] flex max-w-[345px] flex-col items-start sm:mt-16 sm:max-w-2xl lg:max-w-3xl">
           <div className="w-36 sm:w-48 h-[1px] bg-white/25 mb-6 sm:mb-7" aria-hidden="true" />
 
           <div 

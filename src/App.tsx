@@ -57,7 +57,7 @@ function App() {
           <FourPillars />
         </div>
 
-        <div className="w-full mt-12 sm:mt-16 lg:mt-20">
+        <div className="w-full mt-6 sm:mt-16 lg:mt-20">
           <BrandsReady onCtaClick={() => setShowModal(true)} />
         </div>
 

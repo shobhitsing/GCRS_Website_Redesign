@@ -1,5 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ContactSection.css';
+
+type ContactToast = {
+  type: 'success' | 'error';
+  message: string;
+};
+
+const CONTACT_FORM_STORAGE_KEY = 'gap-contact-form';
 
 export interface ContactSectionProps {
   id?: string;
@@ -21,15 +28,73 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [toast, setToast] = useState<ContactToast | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const submission = {
+      name: formData.name.trim(),
+      company: formData.company.trim(),
+      email: formData.email.trim(),
+      location: formData.location.trim(),
+      markets: formData.markets.trim(),
+      message: formData.message.trim(),
+    };
+
+    if (!submission.name || !submission.company || !submission.email) {
+      setToast({ type: 'error', message: 'Please enter your name, company, and work email.' });
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(submission.email)) {
+      setToast({ type: 'error', message: 'Please enter a valid email address.' });
+      return;
+    }
+
+    if (submission.name.length > 120 || submission.company.length > 120 || submission.email.length > 254) {
+      setToast({ type: 'error', message: 'Please check the length of your name, company, or email address.' });
+      return;
+    }
+
+    if (submission.message.length > 2000) {
+      setToast({ type: 'error', message: 'Your message must be 2,000 characters or fewer.' });
+      return;
+    }
+
+    try {
+      window.localStorage.setItem(
+        CONTACT_FORM_STORAGE_KEY,
+        JSON.stringify({ ...submission, submittedAt: new Date().toISOString() }),
+      );
+    } catch (error) {
+      console.error('Unable to save the contact form submission to local storage.', error);
+      setToast({ type: 'error', message: 'Unable to save your details in this browser. Please try again.' });
+      return;
+    }
+
+    setFormData({
+      name: '',
+      company: '',
+      email: '',
+      location: '',
+      markets: '',
+      message: '',
+    });
     setSubmitted(true);
+    setToast({ type: 'success', message: 'Your details were saved in this browser.' });
     if (onSuccess) onSuccess();
   };
 
+  useEffect(() => {
+    if (!toast) return;
+
+    const timeoutId = window.setTimeout(() => setToast(null), 4000);
+    return () => window.clearTimeout(timeoutId);
+  }, [toast]);
+
   return (
-    <section id={id} className={`contact-section relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-0 mt-16 mb-4 sm:mt-24 sm:mb-6 lg:mt-28 lg:mb-8 ${className}`}>
+    <section id={id} className={`contact-section relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-0 mt-6 mb-4 sm:mt-24 sm:mb-6 lg:mt-28 lg:mb-8 ${className}`}>
       <div className="contact-section-layout relative w-full">
         
         <div className="contact-section-intro w-full flex flex-col justify-start">
@@ -78,7 +143,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="contact-form-grid">
+            <form onSubmit={handleSubmit} noValidate className="contact-form-grid">
               <div className="contact-form-field">
                 <label htmlFor="contact-name" className="contact-form-label">
                   Name
@@ -178,6 +243,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         </div>
 
       </div>
+      {toast && (
+        <div
+          className={`fixed bottom-5 left-1/2 z-[100] w-[min(90vw,420px)] -translate-x-1/2 rounded-xl border px-4 py-3 text-sm shadow-lg ${
+            toast.type === 'success'
+              ? 'border-[#CCFF00]/50 bg-[#11141c] text-white'
+              : 'border-red-400/60 bg-[#1c1010] text-white'
+          }`}
+          role={toast.type === 'error' ? 'alert' : 'status'}
+          aria-live={toast.type === 'error' ? 'assertive' : 'polite'}
+        >
+          {toast.message}
+        </div>
+      )}
     </section>
   );
 };
