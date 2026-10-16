@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# Global Access Partners
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive React website for Global Access Partners, showcasing its market-entry, compliance, retail, and marketing support for beauty, fragrance, and personal care brands.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js (current LTS recommended)
+- npm
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies and start the local development server:
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Vite prints the local URL after the server starts.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Run the TypeScript project build and create a production bundle |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run Oxlint |
+
+## Project structure
+
+```text
+src/
+  components/
+    BrandsReady/        Brand-focused call to action
+    ConnectedExpertise/ Expertise and partnership section
+    ContactSection/     Contact form
+    Footer/             Site footer
+    FourPillars/        Services cards
+    Hero/               Main hero section
+    Navbar/             Responsive site navigation
+    NewsletterSection/  Newsletter sign-up section
+    RouteSection/       Market-entry introduction
+  App.tsx               Page composition and shared modal
+  index.css             Global styles and theme
+public/                 Images, icons, and other static assets
+```
+
+## Forms
+
+The contact form currently validates and saves its latest submission in the visitor's browser storage. The newsletter form displays a local confirmation state. Neither form is connected to a server or email-marketing service; connect the forms to the appropriate service before relying on them to receive submissions.

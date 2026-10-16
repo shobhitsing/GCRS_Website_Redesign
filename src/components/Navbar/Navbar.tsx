@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     setIsMobileMenuOpen(false);
     onNavItemClick?.(item);
 
-    if (item.href.startsWith('#')) {
+    if (!onNavItemClick && item.href.startsWith('#')) {
       const targetEl = document.querySelector(item.href);
       if (targetEl) {
         targetEl.scrollIntoView({ behavior: 'smooth' });

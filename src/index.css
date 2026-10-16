@@ -9,9 +9,6 @@
 }
 
 :root {
-  --bg: #000000;
-  --text-main: #FFFFFF;
-  --gap-lime: #CCFF00;
   color-scheme: dark;
 }
 
@@ -46,17 +43,6 @@ body {
   font-style: normal;
   font-size: 22px;
   line-height: 29px;
-  letter-spacing: 0;
-  vertical-align: middle;
-}
-
-/* Canela Typography utility matching BrandsReady section (26px/33px) */
-.canela-text-26 {
-  font-family: 'Canela', 'Canela Text', 'Playfair Display', Georgia, serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 26px;
-  line-height: 33px;
   letter-spacing: 0;
   vertical-align: middle;
 }

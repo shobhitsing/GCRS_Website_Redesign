@@ -7,7 +7,6 @@ export interface PillarCardItem {
   mobileImage: string;
   title: string;
   isExactAsset?: boolean;
-  hasBorder?: boolean;
   tagline: string;
   points: string[];
 }
@@ -33,7 +32,6 @@ const PILLARS_LIST: PillarCardItem[] = [
     mobileImage: '/Group 5 (1).png',
     title: 'Compliance and readiness:',
     isExactAsset: true,
-    hasBorder: true,
     tagline: 'Flawless regulatory alignment for cosmetics & fragrance.',
     points: [
       'EU, UK, FDA and APAC cosmetic formulation review',
@@ -114,6 +112,7 @@ export const FourPillars: React.FC = () => {
               alt={card.title}
               className="four-pillars-mobile-card"
               loading="lazy"
+              decoding="async"
             />
           ))}
         </div>
@@ -142,6 +141,8 @@ export const FourPillars: React.FC = () => {
                         src={card.frontImage}
                         alt={card.title}
                         className="pillar-card-full-img"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="pillar-custom-card-body">
@@ -149,6 +150,8 @@ export const FourPillars: React.FC = () => {
                           src={card.frontImage}
                           alt={card.title}
                           className="pillar-custom-bg"
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="pillar-custom-gradient" />
                         <span className="pillar-custom-flip-tag">Flip cards</span>
