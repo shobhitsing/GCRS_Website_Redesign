@@ -72,7 +72,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
                 <span className="inline-block h-px w-8 bg-white/80 sm:w-14" aria-hidden="true" />
               </span>
             </h2>
-            <div className="flex size-[78px] shrink-0 items-center justify-center rounded-full bg-[#CCFF00] sm:size-[150px] lg:size-[184px]">
+            <div className="flex size-[78px] shrink-0 items-center justify-center rounded-full bg-[#CCFF00] sm:size-[150px] lg:size-[184px] lg:-translate-y-2 lg:translate-x-2">
               <span className="font-sans text-[24px] font-black leading-none tracking-tight text-black sm:text-[46px] lg:text-[54px]">
                 GAP
               </span>
@@ -109,7 +109,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="w-full max-w-[500px] flex flex-col items-center md:max-w-[795.35px]">
+            <form onSubmit={handleSubmit} className="w-full max-w-[500px] flex flex-col items-center md:max-w-[600px]">
               <div className="grid w-full min-w-0 grid-cols-2 gap-2 lg:gap-5">
                 <div className="flex min-w-0 flex-col text-left">
                   <label

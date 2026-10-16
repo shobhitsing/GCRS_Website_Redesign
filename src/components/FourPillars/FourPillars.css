@@ -263,8 +263,14 @@
   transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.pillar-flip-inner.is-flipped {
+.pillar-two-card-item:focus-visible .pillar-flip-inner {
   transform: rotateY(180deg);
+}
+
+@media (hover: hover) {
+  .pillar-two-card-item:hover .pillar-flip-inner {
+    transform: rotateY(180deg);
+  }
 }
 
 .pillar-flip-face {
@@ -424,26 +430,6 @@
   background-color: #ccff00;
   margin-top: 7px;
   flex-shrink: 0;
-}
-
-.pillar-return-btn {
-  align-self: flex-start;
-  margin-top: 18px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  padding: 10px 22px;
-  border-radius: 9999px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.pillar-return-btn:hover {
-  background: #ccff00;
-  border-color: #ccff00;
-  color: #000000;
 }
 
 /* 3 Pagination Dots matching screenshot */

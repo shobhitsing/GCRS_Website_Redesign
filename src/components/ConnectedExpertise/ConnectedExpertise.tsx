@@ -41,7 +41,7 @@ export const ConnectedExpertise: React.FC<ConnectedExpertiseProps> = ({
               loading="lazy"
             />
             <div
-              className="pointer-events-none absolute z-20 origin-top-left scale-[0.55] sm:scale-[0.75] lg:scale-100 -top-6 -left-28 sm:-top-10 sm:-left-48 lg:top-[-56px] lg:left-[-301px]"
+              className="connected-expertise-ring pointer-events-none absolute z-20 origin-top-left scale-[0.55] sm:scale-[0.75] lg:scale-100 -top-6 -left-28 sm:-top-10 sm:-left-48"
               aria-hidden="true"
             >
               <img src={ringSrc} alt="" width={539} height={539} className="block max-w-none" />

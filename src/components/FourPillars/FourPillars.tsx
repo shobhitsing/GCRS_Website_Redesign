@@ -73,15 +73,6 @@ const PILLARS_LIST: PillarCardItem[] = [
 export const FourPillars: React.FC = () => {
   // Default to slide 1 (shows Card 1 & Card 2 with Dot 2 active, exactly like screenshot)
   const [activeSlide, setActiveSlide] = useState(1);
-  const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
-
-  const toggleFlip = (id: string, e?: React.MouseEvent) => {
-    e?.stopPropagation();
-    setFlippedCards((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
 
   
   return (
@@ -118,11 +109,10 @@ export const FourPillars: React.FC = () => {
         </div>
 
         <div className={`four-pillars-two-cards-grid ${activeSlide === 2 ? 'show-remaining-pillars' : ''}`}>
-          {PILLARS_LIST.map((card, cardIndex) => {
-            const isFlipped = !!flippedCards[card.id];
-            const isVisibleCard = activeSlide === 2 ? cardIndex >= 2 : cardIndex < 2;
-            const isActiveCard = activeSlide === 2
-              ? cardIndex === 2
+            {PILLARS_LIST.map((card, cardIndex) => {
+              const isVisibleCard = activeSlide === 2 ? cardIndex >= 2 : cardIndex < 2;
+              const isActiveCard = activeSlide === 2
+                ? cardIndex === 2
               : activeSlide === 1
                 ? cardIndex === 1
                 : cardIndex === 0;
@@ -131,9 +121,10 @@ export const FourPillars: React.FC = () => {
               <div
                 key={card.id}
                 className={`pillar-two-card-item ${isVisibleCard ? 'is-visible' : ''} ${isActiveCard ? 'card-has-focus' : ''}`}
-                onClick={() => toggleFlip(card.id)}
+                tabIndex={0}
+                aria-label={card.title}
               >
-                <div className={`pillar-flip-inner ${isFlipped ? 'is-flipped' : ''}`}>
+                <div className="pillar-flip-inner">
                   
                   <div className="pillar-flip-face pillar-flip-front">
                     {card.isExactAsset ? (
@@ -176,13 +167,6 @@ export const FourPillars: React.FC = () => {
                       ))}
                     </ul>
 
-                    <button
-                      type="button"
-                      className="pillar-return-btn"
-                      onClick={(e) => toggleFlip(card.id, e)}
-                    >
-                      Flip back
-                    </button>
                   </div>
 
                 </div>
