@@ -24,7 +24,7 @@
 
 /* Staggered Highlighter Header */
 .four-pillars-header {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -137,7 +137,7 @@
 
   .four-pillars-header {
     gap: 8px;
-    margin: 0 -20px 20px;
+    margin: 0 -20px 48px;
   }
 
   .four-pillars-line-1 {
