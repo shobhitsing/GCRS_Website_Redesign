@@ -53,9 +53,9 @@ body {
   pointer-events: none;
   z-index: 0;
   user-select: none;
-  width: 938.841912px;
-  height: 916.602594px;
-  top: 350px;
+  width: min(1070px, 88vw);
+  height: min(1044px, 86vw);
+  top: 0;
   left: 50%;
   transform: translateX(-50%) rotate(-0.27deg);
   opacity: 1;
@@ -63,10 +63,11 @@ body {
 
 @media (max-width: 1024px) {
   .gap-brand-ring {
-    width: 680px;
-    height: 664px;
-    top: 420px;
-    left: calc(50% - 340px);
+    width: min(900px, 88vw);
+    height: min(880px, 86vw);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-0.27deg);
   }
 }
 
