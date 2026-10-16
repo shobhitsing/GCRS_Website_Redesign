@@ -17,7 +17,6 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
     if (!agreed) return;
     setSubscribed(true);
   };
-
   return (
     <section className={`relative z-10 w-full max-w-[1140px] mx-auto px-4 sm:px-6 mt-4 mb-0 sm:mt-6 lg:mt-8 ${className}`}>
       <div className="relative min-h-0 w-full bg-black px-5 pb-8 pt-10 sm:min-h-[500px] sm:px-10 sm:pb-16 sm:pt-14 md:min-h-[580px] lg:min-h-[630px] lg:overflow-hidden lg:px-14 lg:pb-8 lg:pt-7">
