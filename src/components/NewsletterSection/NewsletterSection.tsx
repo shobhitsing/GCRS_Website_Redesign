@@ -20,7 +20,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
 
   return (
     <section className={`relative z-10 w-full max-w-[1140px] mx-auto px-4 sm:px-6 mt-4 mb-0 sm:mt-6 lg:mt-8 ${className}`}>
-      <div className="relative min-h-0 w-full bg-black px-5 pb-8 pt-10 sm:min-h-[500px] sm:px-10 sm:pb-16 sm:pt-14 md:min-h-[580px] lg:min-h-[630px] lg:px-14 lg:pb-8 lg:pt-7">
+      <div className="relative min-h-0 w-full bg-black px-5 pb-8 pt-10 sm:min-h-[500px] sm:px-10 sm:pb-16 sm:pt-14 md:min-h-[580px] lg:min-h-[630px] lg:overflow-hidden lg:px-14 lg:pb-8 lg:pt-7">
         <svg
           className="pointer-events-none absolute left-1/2 top-0 z-0 hidden h-auto w-[min(1024px,calc(100vw-32px))] max-w-none -translate-x-1/2 select-none sm:block"
           viewBox="0 0 1024 630"
@@ -28,15 +28,9 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
           aria-hidden="true"
         >
           <path
-            d="M -8 416 C 54 264 165 139 270 100"
+            d="M 350 132 A 568 568 0 1 0 833 200"
             stroke="#CCFF00"
-            strokeWidth="30"
-            strokeLinecap="butt"
-          />
-          <path
-            d="M 846 162 C 924 218 988 301 1032 394"
-            stroke="#CCFF00"
-            strokeWidth="30"
+            strokeWidth="38"
             strokeLinecap="butt"
           />
         </svg>
@@ -61,7 +55,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
         </svg>
 
         <div className="relative z-10 mx-auto flex w-full max-w-[800px] flex-col items-center">
-          <div className="flex items-start justify-center gap-2 sm:gap-5">
+          <div className="flex items-start justify-center gap-2 sm:gap-5 lg:translate-x-[80px]">
             <h2 className="mt-2 m-0 w-[142px] shrink-0 text-left font-serif text-[29.55px] font-normal leading-[24.9px] text-white sm:mt-3 sm:w-auto sm:text-[40px] sm:leading-[0.98] lg:text-[46px]">
               Stay
               <br />
