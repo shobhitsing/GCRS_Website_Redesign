@@ -125,7 +125,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
                     placeholder="Your Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="h-[20.3px] w-[167.93px] max-w-full rounded-none border-[0.32px] border-[rgba(248,246,241,0.18)] bg-[#0a0a0a] px-[7.16px] py-[5.57px] text-[7px] text-white placeholder-white/30 focus:border-[#CCFF00] focus:outline-none transition-colors sm:h-[46.85px] sm:w-full sm:rounded-[6px] sm:border-[0.73px] sm:px-[16.54px] sm:py-[12.86px] sm:text-[12px] lg:w-[387.6727px] lg:rounded-none"
+                    className="h-[20.3px] w-[167.93px] max-w-full rounded-none border-[0.32px] border-[rgba(248,246,241,0.18)] bg-black px-[7.16px] py-[5.57px] text-[7px] text-white placeholder-white/30 focus:border-[#CCFF00] focus:outline-none transition-colors sm:h-[46.85px] sm:w-full sm:rounded-[6px] sm:border-[0.73px] sm:px-[16.54px] sm:py-[12.86px] sm:text-[12px] lg:w-[387.6727px] lg:rounded-none"
                   />
                 </div>
                 <div className="flex min-w-0 flex-col text-left">
@@ -142,7 +142,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
                     placeholder="you@brand.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="h-[20.3px] w-[167.93px] max-w-full rounded-none border-[0.32px] border-[rgba(248,246,241,0.18)] bg-[#0a0a0a] px-[7.16px] py-[5.57px] text-[7px] text-white placeholder-white/30 focus:border-[#CCFF00] focus:outline-none transition-colors sm:h-[46.85px] sm:w-full sm:rounded-[6px] sm:border-[0.73px] sm:px-[16.54px] sm:py-[12.86px] sm:text-[12px] lg:w-[387.6727px] lg:rounded-none"
+                    className="h-[20.3px] w-[167.93px] max-w-full rounded-none border-[0.32px] border-[rgba(248,246,241,0.18)] bg-black px-[7.16px] py-[5.57px] text-[7px] text-white placeholder-white/30 focus:border-[#CCFF00] focus:outline-none transition-colors sm:h-[46.85px] sm:w-full sm:rounded-[6px] sm:border-[0.73px] sm:px-[16.54px] sm:py-[12.86px] sm:text-[12px] lg:w-[387.6727px] lg:rounded-none"
                   />
                 </div>
               </div>
