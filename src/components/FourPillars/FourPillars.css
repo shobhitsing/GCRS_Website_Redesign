@@ -24,10 +24,20 @@
 
 /* Staggered Highlighter Header */
 .four-pillars-header {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.four-pillars-desktop-intro {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: 'Canela', 'Canela Text', 'Playfair Display', Georgia, serif;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.4;
+  text-align: center;
 }
 
 .four-pillars-line-1 {
@@ -108,7 +118,7 @@
   box-sizing: border-box;
 }
 
-.four-pillars-mobile-image {
+.four-pillars-mobile-cards {
   display: none;
 }
 
@@ -131,12 +141,16 @@
 
   .four-pillars-container {
     padding: 24px 19px 28px;
-    background-color: #191a1d;
+    background-color: #000000;
   }
 
   .four-pillars-header {
     gap: 8px;
     margin: 0 -20px 32px;
+  }
+
+  .four-pillars-desktop-intro {
+    display: none;
   }
 
   .four-pillars-line-1 {
@@ -178,11 +192,21 @@
     display: none;
   }
 
-  .four-pillars-mobile-image {
-    display: block;
-    width: min(442.3349px, 100%);
-    height: auto;
+  .four-pillars-mobile-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 520px;
     margin-inline: auto;
+  }
+
+  .four-pillars-mobile-card {
+    display: block;
+    width: 100%;
+    aspect-ratio: 610 / 626;
+    object-fit: cover;
+    border-radius: 12px;
   }
 
   .pillar-two-card-item,

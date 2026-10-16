@@ -4,6 +4,7 @@ import './FourPillars.css';
 export interface PillarCardItem {
   id: string;
   frontImage: string;
+  mobileImage: string;
   title: string;
   isExactAsset?: boolean;
   hasBorder?: boolean;
@@ -15,6 +16,7 @@ const PILLARS_LIST: PillarCardItem[] = [
   {
     id: 'market-entry',
     frontImage: '/Group 6.png',
+    mobileImage: '/Group 6 (1).png',
     title: 'Market entry strategy:',
     isExactAsset: true,
     tagline: 'Strategic roadmap for seamless international expansion.',
@@ -28,6 +30,7 @@ const PILLARS_LIST: PillarCardItem[] = [
   {
     id: 'compliance',
     frontImage: '/Group 5.png',
+    mobileImage: '/Group 5 (1).png',
     title: 'Compliance and readiness:',
     isExactAsset: true,
     hasBorder: true,
@@ -42,6 +45,7 @@ const PILLARS_LIST: PillarCardItem[] = [
   {
     id: 'retail',
     frontImage: '/Group 3.png',
+    mobileImage: '/Group 3 (1).png',
     title: 'Retail & distributor connections:',
     isExactAsset: false,
     tagline: 'Access to premier retail buyers and trusted distributor networks.',
@@ -55,6 +59,7 @@ const PILLARS_LIST: PillarCardItem[] = [
   {
     id: 'marketing',
     frontImage: '/Group 4.png',
+    mobileImage: '/Group 4 (1).png',
     title: 'Marketing & growth support:',
     isExactAsset: false,
     tagline: 'Cultural resonance and sustained brand momentum.',
@@ -101,11 +106,21 @@ export const FourPillars: React.FC = () => {
           </div>
         </div>
 
-        <img
-          src="/Group 22.png"
-          alt="The four pillars: market entry strategy, compliance and readiness, retail and distribution, and marketing and growth"
-          className="four-pillars-mobile-image"
-        />
+        <p className="four-pillars-desktop-intro">
+          Choose where to focus and build a clear route in, from market insight and positioning to commercial planning and launch strategy
+        </p>
+
+        <div className="four-pillars-mobile-cards">
+          {PILLARS_LIST.map((card) => (
+            <img
+              key={card.id}
+              src={card.mobileImage}
+              alt={card.title}
+              className="four-pillars-mobile-card"
+              loading="lazy"
+            />
+          ))}
+        </div>
 
         <div className={`four-pillars-two-cards-grid ${activeSlide === 2 ? 'show-remaining-pillars' : ''}`}>
           {PILLARS_LIST.map((card, cardIndex) => {
