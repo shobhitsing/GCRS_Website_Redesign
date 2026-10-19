@@ -45,7 +45,6 @@ src/
   index.css             Global styles and theme
 public/                 Images, icons, and other static assets
 ```
-
 ## Forms
 
 The contact form currently validates and saves its latest submission in the visitor's browser storage. The newsletter form displays a local confirmation state. Neither form is connected to a server or email-marketing service; connect the forms to the appropriate service before relying on them to receive submissions.
